@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .full-screen-base {
+	@apply fixed inset-0 border-0 m-0 flex flex-col p-0 antialiased
+    }
+    .control-bar {
+	@apply w-full m-0 p-0 h-32 border-0 flex items-end flex-col md:flex-row justify-between md:justify-around items-center overflow-auto;
+    }
+     .control-bar-large {
+	@apply w-full m-0 p-0 h-48 border-0 flex items-end flex-col md:flex-row justify-between md:justify-around items-center overflow-auto;
+    }        
+    .btn-focus {
+        @apply focus:outline-none focus:ring-4 focus:ring-persian_blue-400;
+    }
+    .btn-hover {
+	@apply  hover:bg-apple_green-50 hover:text-persian_blue-800
+    }
+    .dark-colors {
+	@apply bg-persian_blue-800 text-apple_green-50;  
+    }
+    .light-colors {
+	@apply text-persian_blue-800 bg-apple_green-50;  
+    }
+
+    .tab-trigger[data-state="active"] {
+	@apply text-black underline;
+    }
+
+}
+
