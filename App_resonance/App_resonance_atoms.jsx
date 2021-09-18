@@ -5,7 +5,7 @@ import { LabelDataComp } from '@jesseburke/jotai-data-setup';
 import { NumberDataComp } from '@jesseburke/jotai-data-setup';
 import { AxesDataComp } from '@jesseburke/jotai-data-setup';
 import { CurveDataComp } from '@jesseburke/jotai-data-setup';
-import SvgDataComp from './SvgData';
+import { SvgDataComp } from '@jesseburke/jotai-data-setup';
 
 import { TexDisplayComp } from '@jesseburke/components';
 import { Slider } from '@jesseburke/components';

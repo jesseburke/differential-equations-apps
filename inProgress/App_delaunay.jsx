@@ -4,10 +4,9 @@ import * as THREE from 'three';
 
 import Delaunator from 'delaunator';
 
-import} {{ FullScreenBaseComponent } from '@jesseburke/components';
-
 import { ThreeSceneComp, useThreeCBs } from '@jesseburke/three-scene-with-react';
-import {ClickablePlaneComp} from '@jesseburke/components';
+
+import { ClickablePlaneComp } from '@jesseburke/components';
 
 import useGridAndOrigin from '../../geometries/useGridAndOrigin.jsx';
 import use2DAxes from '../../geometries/use2DAxes.jsx';
@@ -149,7 +148,8 @@ export default function App() {
                     alignItems: 'center',
                     fontSize: '1.25em',
                     userSelect: 'none'
-                }}>
+                }}
+            >
                 <div
                     css={{
                         paddingLeft: '1em',
@@ -159,11 +159,13 @@ export default function App() {
                         display: 'flex',
                         justifyContent: 'space-around',
                         alignItems: 'baseline'
-                    }}>
+                    }}
+                >
                     <span
                         css={{
                             margin: '.5em'
-                        }}>
+                        }}
+                    >
                         {' '}
                         Triangles are :{triangleDisplayStr}
                     </span>
@@ -178,11 +180,13 @@ export default function App() {
                         display: 'flex',
                         justifyContent: 'space-around',
                         alignItems: 'baseline'
-                    }}>
+                    }}
+                >
                     <span
                         css={{
                             margin: '.5em'
-                        }}>
+                        }}
+                    >
                         {' '}
                         Halfedge array is:
                         {halfedgeDisplayStr}
