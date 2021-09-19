@@ -3,7 +3,7 @@ import React, { Fragment, useState, useRef, useEffect, useCallback } from 'react
 import queryString from 'query-string';
 
 import * as THREE from 'three';
-import * as BufferGeometryUtils from 'three/examples/jsm/utils/BufferGeometryUtils.jsx';
+import { mergeBufferGeometries } from './MergeGeometries';
 
 import { Helmet } from 'react-helmet';
 
@@ -380,7 +380,7 @@ export default function App() {
             return new THREE.TubeBufferGeometry(path, 1064, slRadius, 8, false);
         });
 
-        const geom = BufferGeometryUtils.mergeBufferGeometries(geomArray);
+        const geom = mergeBufferGeometries(geomArray);
         geomArray.forEach((g) => g.dispose());
 
         const mesh = new THREE.Mesh(geom, solutionMaterial);
