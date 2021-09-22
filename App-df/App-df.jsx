@@ -27,7 +27,7 @@ import {
     orthoCameraData,
     zHeightAtom,
     atomStoreAtom
-} from './App_df_atoms';
+} from './App-df-atoms';
 
 const initControlsData = {
     mouseButtons: { LEFT: THREE.MOUSE.PAN },

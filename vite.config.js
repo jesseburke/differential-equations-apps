@@ -7,12 +7,12 @@ export default defineConfig({
     build: {
         rollupOptions: {
             input: {
-                App_df: resolve(__dirname, 'public_pages/directionFieldGrapher/index.html'),
-                App_sep: resolve(__dirname, 'public_pages/sepGrapher/index.html'),
-                App_linear: resolve(__dirname, 'public_pages/linearGrapher/index.html'),
-                App_logistic: resolve(__dirname, 'public_pages/logisticGrapher/index.html'),
-                App_resonance: resolve(__dirname, 'public_pages/resonance/index.html'),
-                SecOrder: resolve(__dirname, 'public_pages/secOrderGrapher/index.html')
+                App_df: resolve(__dirname, 'App-df/index.html'),
+                App_sep: resolve(__dirname, 'App-sep/index.html'),
+                App_linear: resolve(__dirname, 'App-linear/index.html'),
+                App_logistic: resolve(__dirname, 'App-logistic/index.html'),
+                App_resonance: resolve(__dirname, 'App-resonance/index.html'),
+                App_sec_order: resolve(__dirname, 'App-sec-orderGrapher/index.html')
             },
             output: {
                 dir: 'dist'

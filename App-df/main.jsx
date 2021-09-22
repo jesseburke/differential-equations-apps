@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import { Helmet } from 'react-helmet';
 
-import App from './App_df';
+import App from './App-df';
 const title = 'Direction Field Grapher';
 
 function main() {
