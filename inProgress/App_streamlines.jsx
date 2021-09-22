@@ -318,7 +318,27 @@ export default function App() {
         setState(({ initialPt, ...rest }) => ({ initialPt: [vec.x, vec.y], ...rest }));
     }, [meshArray]);
 
+
+    // following function was copied and deleted from its own file
+    function useDraggableMeshArray({ threeCBs, meshArray, dragendCB, dragCB }) {
+	useEffect(() => {
+            if (!threeCBs || !meshArray) return;
+
+            const nonNullMeshArray = meshArray.filter((m) => m);
+
+            if (nonNullMeshArray.length === 0) return;
+
+            const controlsDisposeFunc = threeCBs.addDragControls({ meshArray, dragCB, dragendCB });
+            return () => {
+		if (controlsDisposeFunc) controlsDisposeFunc();
+            };
+	}, [threeCBs, meshArray, dragendCB, dragCB]);
+    }
+
+    
     useDraggableMeshArray({ meshArray, threeCBs, dragCB, dragendCB: dragCB });
+
+    
 
     // change initial point mesh if initialPoint changes
 
