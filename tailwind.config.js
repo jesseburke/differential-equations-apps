@@ -3,6 +3,7 @@ const plugin = require('tailwindcss/plugin');
 
 module.exports = {
     plugins: [],
+    mode: 'jit',   
     purge: ['./**/*.html', './**/*.js', './**/*.ts', './**/*.tsx', './**/*.jsx'],
     darkMode: false, // or 'media' or 'class'
     theme: {
