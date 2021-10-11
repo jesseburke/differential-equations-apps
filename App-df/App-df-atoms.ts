@@ -8,6 +8,7 @@ import { AxesDataComp } from '@jesseburke/jotai-data-setup';
 import { BoundsDataComp } from '@jesseburke/jotai-data-setup';
 import { CurveDataComp } from '@jesseburke/jotai-data-setup';
 import { OrthoCameraDataComp } from '@jesseburke/jotai-data-setup';
+import { MainDataComp } from '@jesseburke/jotai-data-setup';
 
 import { ObjectPoint2, Bounds, CurveData2, LabelStyle, AxesDataT } from '../../../my-types';
 
@@ -99,6 +100,8 @@ export const atomStoreAtom = atom({
     bd: boundsData.readWriteAtom,
     cd: orthoCameraData.readWriteAtom
 });
+
+export const DataComp = MainDataComp(atomStoreAtom);
 
 function theta(a) {
     return Math.asin(a / Math.sqrt(a * a + 1));

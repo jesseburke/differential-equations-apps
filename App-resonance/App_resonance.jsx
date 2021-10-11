@@ -6,8 +6,6 @@ import { atom, useAtom, Provider as JProvider } from 'jotai';
 
 import { OptionsTabComp } from '@jesseburke/components';
 
-import { MainDataComp } from '@jesseburke/jotai-data-setup';
-
 import { SvgScene } from '@jesseburke/svg-scene-with-react';
 import { SvgBorderAxes } from '@jesseburke/svg-scene-with-react';
 import { SvgAxes } from '@jesseburke/svg-scene-with-react';
@@ -18,9 +16,9 @@ import {
     labelData,
     solutionCurveData,
     axesData,
-    atomStoreAtom,
     SecondOrderInput,
-    svgData
+    svgData,
+    DataComp
 } from './App_resonance_atoms.jsx';
 
 import '../styles.css';
@@ -40,8 +38,6 @@ const resetBtnClassStr = btnClassStr + ' bottom-8';
 const photoBtnClassStr = btnClassStr + ' bottom-8';
 
 export default function App() {
-    const DataComp = MainDataComp(atomStoreAtom);
-
     return (
         <JProvider>
             <div className='full-screen-base'>

@@ -7,7 +7,6 @@ import * as THREE from 'three';
 import '../styles.css';
 
 import { ThreeSceneComp } from '@jesseburke/three-scene-with-react';
-import { MainDataComp } from '@jesseburke/jotai-data-setup';
 import { OptionsTabComp } from '@jesseburke/components';
 
 import { Grid } from '@jesseburke/three-scene-with-react';
@@ -26,7 +25,7 @@ import {
     axesData,
     orthoCameraData,
     zHeightAtom,
-    atomStoreAtom
+    DataComp
 } from './App-df-atoms';
 
 const initControlsData = {
@@ -62,8 +61,7 @@ const photoBtnClassStr = btnClassStr + ' bottom-8';
 //------------------------------------------------------------------------
 
 export default function App() {
-    const DataComp = MainDataComp(atomStoreAtom);
-
+    
     return (
         <JotaiProvider>
             <div className='full-screen-base'>

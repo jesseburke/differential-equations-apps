@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { atom, useAtom } from 'jotai';
 
+import { MainDataComp } from '@jesseburke/jotai-data-setup';
 import { LabelDataComp } from '@jesseburke/jotai-data-setup';
 import { NumberDataComp } from '@jesseburke/jotai-data-setup';
 import { AxesDataComp } from '@jesseburke/jotai-data-setup';
@@ -79,6 +80,8 @@ export const atomStoreAtom = atom({
     w0: w0Data.readWriteAtom,
     svg: svgData.svgSaveDataAtom
 });
+
+export const DataComp = MainDataComp(atomStoreAtom);
 
 //------------------------------------------------------------------------
 //

@@ -3,6 +3,7 @@ import { atom, useAtom } from 'jotai';
 
 import * as THREE from 'three';
 
+import { MainDataComp } from '@jesseburke/jotai-data-setup';
 import { LabelDataComp } from '@jesseburke/jotai-data-setup';
 import { LineDataComp } from '@jesseburke/jotai-data-setup';
 import { PointDataComp } from '@jesseburke/jotai-data-setup';
@@ -111,6 +112,8 @@ export const atomStoreAtom = atom({
     b: bData.readWriteAtom,
     k: kData.readWriteAtom
 });
+
+export const DataComp = MainDataComp(atomStoreAtom);
 
 //------------------------------------------------------------------------
 //

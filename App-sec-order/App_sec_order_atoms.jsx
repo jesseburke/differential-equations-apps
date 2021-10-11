@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { atom, useAtom } from 'jotai';
 
+import { MainDataComp } from '@jesseburke/jotai-data-setup';
 import { LabelDataComp } from '@jesseburke/jotai-data-setup';
 import { NumberDataComp } from '@jesseburke/jotai-data-setup';
 import { PointDataComp } from '@jesseburke/jotai-data-setup';
@@ -9,7 +10,7 @@ import { BoundsDataComp } from '@jesseburke/jotai-data-setup';
 import { CurveDataComp } from '@jesseburke/jotai-data-setup';
 import { OrthoCameraDataComp } from '@jesseburke/jotai-data-setup';
 
-import { SvgDataComp } from '@jesseburke/jotai-data-setup';
+import { SvgDataComp } from '@jesseburke/svg-scene-with-react';
 
 import { TexDisplayComp } from '@jesseburke/components';
 import { Slider } from '@jesseburke/components';
@@ -102,6 +103,8 @@ export const atomStoreAtom = atom({
     ip2: initialPoint2Data.readWriteAtom,
     svg: svgData.svgSaveDataAtom
 });
+
+export const DataComp = MainDataComp(atomStoreAtom);
 
 //------------------------------------------------------------------------
 //

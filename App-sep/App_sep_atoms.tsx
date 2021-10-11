@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 
 import { atom, useAtom } from 'jotai';
 
+import { MainDataComp } from '@jesseburke/jotai-data-setup';
 import { LabelDataComp } from '@jesseburke/jotai-data-setup';
 import { PointDataComp } from '@jesseburke/jotai-data-setup';
 import { FunctionDataComp } from '@jesseburke/jotai-data-setup';
@@ -109,13 +110,18 @@ export const atomStoreAtom = atom({
     ys: yFunctionData.readWriteAtom
 });
 
+export const DataComp = MainDataComp(atomStoreAtom);
+
 //------------------------------------------------------------------------
 //
 // derived atoms
 
-export const funcAtom = atom((get) => ({
-    func: (x, y) => get(xFunctionData.funcAtom).func(x, 0) * get(yFunctionData.funcAtom).func(0, y)
-}));
+export const funcAtom = atom((get) => {
+    const xFunc = get(xFunctionData.funcAtom).func;
+    const yFunc = get(yFunctionData.funcAtom).func;
+
+    return { func: (x, y) => xFunc(x, 0) * yFunc(0, y) };
+});
 
 function theta(a) {
     return Math.asin(a / Math.sqrt(a * a + 1));

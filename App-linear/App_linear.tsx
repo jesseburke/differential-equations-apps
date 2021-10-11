@@ -7,7 +7,6 @@ import { atom, useAtom, Provider as JProvider } from 'jotai';
 import { OptionsTabComp } from '@jesseburke/components';
 
 import { ThreeSceneComp } from '@jesseburke/three-scene-with-react';
-import { MainDataComp } from '@jesseburke/jotai-data-setup';
 import { Grid } from '@jesseburke/three-scene-with-react';
 import { Axes2D } from '@jesseburke/three-scene-with-react';
 import { ArrowGrid } from '@jesseburke/three-scene-with-react';
@@ -25,8 +24,8 @@ import {
     orthoCameraData,
     zHeightAtom,
     LinearEquationInput,
-    atomStoreAtom
-} from './App_linear_atoms.jsx';
+    DataComp
+} from './App_linear_atoms';
 
 //------------------------------------------------------------------------
 //
@@ -65,7 +64,6 @@ const photoBtnClassStr = btnClassStr + ' bottom-8';
 //------------------------------------------------------------------------
 
 export default function App() {
-    const DataComp = MainDataComp(atomStoreAtom);
     return (
         <JProvider>
             <div className='full-screen-base'>

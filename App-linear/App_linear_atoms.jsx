@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { atom, useAtom } from 'jotai';
 
+import { MainDataComp } from '@jesseburke/jotai-data-setup';
 import { LabelDataComp } from '@jesseburke/jotai-data-setup';
 import { PointDataComp } from '@jesseburke/jotai-data-setup';
 import { FunctionDataComp } from '@jesseburke/jotai-data-setup';
@@ -82,7 +83,7 @@ export const boundsData = BoundsDataComp({
 
 export const orthoCameraData = OrthoCameraDataComp(initCameraData);
 
-const pxFunctionData = FunctionDataComp({
+export const pxFunctionData = FunctionDataComp({
     initVal: initPXFuncStr,
     functionLabelAtom: atom((get) => 'p(' + get(labelData.atom).x + ') = '),
     labelAtom: labelData.atom,
@@ -108,14 +109,20 @@ export const atomStoreAtom = atom({
     qx: qxFunctionData.readWriteAtom
 });
 
+export const DataComp = MainDataComp(atomStoreAtom);
+
 //------------------------------------------------------------------------
 //
 // derived atoms
 
-export const funcAtom = atom((get) => ({
-    func: (x, y) =>
-        get(pxFunctionData.funcAtom).func(x, 0) * -y + get(qxFunctionData.funcAtom).func(x, 0)
-}));
+export const funcAtom = atom((get) => {
+    const pxFunc = get(pxFunctionData.funcAtom).func;
+    const qxFunc = get(qxFunctionData.funcAtom).func;
+
+    return {
+        func: (x, y) => pxFunc(x, 0) * -y + qxFunc(x, 0)
+    };
+});
 
 function theta(a) {
     return Math.asin(a / Math.sqrt(a * a + 1));
