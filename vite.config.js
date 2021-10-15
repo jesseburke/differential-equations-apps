@@ -12,7 +12,7 @@ export default defineConfig({
                 App_linear: resolve(__dirname, 'App-linear/index.html'),
                 App_logistic: resolve(__dirname, 'App-logistic/index.html'),
                 App_resonance: resolve(__dirname, 'App-resonance/index.html'),
-                App_sec_order: resolve(__dirname, 'App-sec-orderGrapher/index.html')
+                App_sec_order: resolve(__dirname, 'App-sec-order/index.html')
             },
             output: {
                 dir: 'dist'
