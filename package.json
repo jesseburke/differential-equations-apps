@@ -13,10 +13,10 @@
     "dependencies": {
         "@jesseburke/basic-utils": "^0.0.1",
         "@jesseburke/components": "^0.0.1",
-        "@jesseburke/jotai-data-setup": "^0.0.5",
+        "@jesseburke/jotai-data-setup": "^0.0.6",
         "@jesseburke/math-utils": "^0.0.0",
-        "@jesseburke/svg-scene-with-react": "^0.0.6",
-        "@jesseburke/three-scene-with-react": "^0.0.8",
+        "@jesseburke/svg-scene-with-react": "^0.0.7",
+        "@jesseburke/three-scene-with-react": "^0.0.9",
         "@radix-ui/react-checkbox": "^0.0.16",
         "jotai": "^0.16.11",
         "query-string-esm": "^6.13.6",
