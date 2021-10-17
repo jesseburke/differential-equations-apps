@@ -5,7 +5,6 @@ import * as THREE from 'three';
 
 import { MainDataComp } from '@jesseburke/jotai-data-setup';
 import { LabelDataComp } from '@jesseburke/jotai-data-setup';
-import { LineDataComp } from '@jesseburke/jotai-data-setup';
 import { PointDataComp } from '@jesseburke/jotai-data-setup';
 import { NumberDataComp } from '@jesseburke/jotai-data-setup';
 import { ArrowGridDataComp } from '@jesseburke/jotai-data-setup';
@@ -13,6 +12,8 @@ import { AxesDataComp } from '@jesseburke/jotai-data-setup';
 import { BoundsDataComp } from '@jesseburke/jotai-data-setup';
 import { CurveDataComp } from '@jesseburke/jotai-data-setup';
 import { OrthoCameraDataComp } from '@jesseburke/jotai-data-setup';
+
+import { LineDataComp } from '@jesseburke/three-scene-with-react';
 
 import { TexDisplayComp } from '@jesseburke/components';
 import { Slider } from '@jesseburke/components';
