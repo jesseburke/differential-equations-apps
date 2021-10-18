@@ -1,7 +1,7 @@
 # Direction field apps
 
 There are six apps, all are available at
-[jesseburke.org/apps/differential-equations-apps](https://jesseburke.org/differential-equations-apps). 
+[jesseburke.org/apps/differential-equations-apps](https://jesseburke.org/apps/differential-equations-apps). 
 
 We describe one such app in detail:
 
@@ -9,7 +9,7 @@ We describe one such app in detail:
 
 Graphs the direction field of a first order differential equation.
 
-[jesseburke.org/apps/differential-equations-apps/App-df/](https://jesseburke.org/differential-equations-apps/App-df/). 
+[jesseburke.org/apps/differential-equations-apps/App-df/](https://jesseburke.org/apps/differential-equations-apps/App-df/). 
 
 
 ### Features
