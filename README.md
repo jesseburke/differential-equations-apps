@@ -41,8 +41,6 @@ are used.
 
 The program is structured as follows:
 
-The entire page and program is a single React component named App,
-with the following structure, which is explained further below:
 ```javascript
 function App() {
     return (
